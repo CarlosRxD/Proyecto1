@@ -1,0 +1,20 @@
+/* Estilo básico para imágenes de productos */
+img{
+    width: 10%;
+    /* Ajusta el ancho de la imagen al contenedor */
+    margin: 10px;
+    border-radius: 8px;
+    /* Añade esquinas redondeadas */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Añade sombra */
+    transition: transform 0.3s ease;
+    /* Agrega una transición suave */
+}
+
+/* Estilo para cambiar la apariencia al pasar el ratón sobre la imagen */
+img:hover {
+    transform: scale(1.05);
+    /* Escala ligeramente la imagen */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Aumenta la sombra */
+}

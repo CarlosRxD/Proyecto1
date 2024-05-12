@@ -1,0 +1,16 @@
+<div>
+    <form [formGroup]="frmPS" (ngSubmit)="agregar()">
+        <label for="id" class="form-label">ID:</label>
+        <input type="number" formControlName="id" id="id" class="form-control" title="Ingrese su id aquí" />
+        <label for="name" class="form-label">Nombre:</label>
+        <input type="name" formControlName="name" id="name" class="form-control" title="Ingrese su nombre aquí" />
+        <button class="btn btn-outline-success" type="submit">Agregar</button>
+    </form>
+
+</div>
+
+@for (user of listaUsers.users; track user.id){
+<p>{{user.id+"_ "+user.name}}<button class="btn btn-outline-danger" (click)="eliminar($index)" type="submit">Eliminar</button></p>
+}@empty {
+<span>Lista vacia</span>
+}

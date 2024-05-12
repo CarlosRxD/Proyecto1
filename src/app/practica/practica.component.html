@@ -1,0 +1,39 @@
+<label for="txtValor" class="form-label">Valor:</label>
+<input name="txtValor" id="txtValor" type="text" class="form-control" [formControl]="txtValor" />
+<button class="btn btn-outline-success" (click)="mostrarValor()">Obtener Valor</button>
+<button class="btn btn-outline-success" type="button" (click)="actualizarValor()">Actualizar Valor</button>
+<button class="btn btn-outline-success" type="button" (click)="reset()">Resetear Valor</button>
+<br />
+<br />
+<form [formGroup]="frmPS" (ngSubmit)="onSubmit()">
+    <label for="matricula" class="form-label">Matricula:</label>
+    <input type="text" formControlName="matricula" id="matricula" class="form-control"
+        title="Ingrese su matrícula aquí" />
+    <label for="email" class="form-label">Email:</label>
+    <input type="text" formControlName="email" id="email" class="form-control"
+        title="Ingrese su dirección de correo electrónico aquí" />
+    <label for="mensaje" class="form-label">Mensaje:</label>
+    <textarea formControlName="mensaje" id="mensaje" class="form-control" title="Ingrese su mensaje aquí"></textarea>
+    <label for="carrera" class="form-label">Carrera:</label>
+    <select id="carrera" title="Lista de Carreras" formControlName="carrera" class="form-select">
+        <option value="1">Computacion</option>
+        <option value="2">Mecatronica</option>
+        <option value="3">Matematicas</option>
+    </select>
+    <br>
+    <div>
+        <button class="btn btn-success" type="submit">Enviar</button>
+        <button class="btn btn-info" type="button" (click)="modificarControl()">Modificar</button>
+    </div>
+</form>
+
+<p>
+    @if(numCarrera==1){
+        <h1>Ing. en Computacion</h1>
+}   @else if(numCarrera==2){
+        <h1>Ing. en Mecatronica</h1>
+}   @else if(numCarrera==3){
+        <h1   h1>Ing. en Matematicas</h1>
+}
+
+</p>

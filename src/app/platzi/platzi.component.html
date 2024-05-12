@@ -1,0 +1,19 @@
+@if(data){
+@for(item of data;track data.id){
+<ul>
+    <li>{{ item.id }}</li>
+    <li>{{ item.title }}</li>
+    <li>{{ item.price }}</li>
+    <li>{{ item.description }}</li>
+    <li> Category {{ item.category.id }}
+        <ul>
+            <li>{{ item.category.name }}</li>
+            <li>{{ item.category.image }}</li>
+        </ul>
+    </li>
+    <li> Images
+        @for(image of item.images;track image){ <img [src]="image"  alt="imagen"> }
+    </li>
+</ul>
+}
+}@else{ <h3>vacio</h3>}
