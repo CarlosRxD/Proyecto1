@@ -1,0 +1,41 @@
+<div class="container mt-5">
+    <h2>CRUD de Materias</h2>
+    <hr>
+
+    
+    <!-- Formulario de creación -->
+    <div >
+        <h3>Agregar Materia</h3>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre de la Materia</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre de la materia">
+            </div>
+            <button type="submit" class="btn btn-success">Guardar</button>
+            
+        </form>
+    </div>
+
+    <!-- Tabla de materias -->
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se mostrarán las materias -->
+            <tr>
+                <td>Materia</td>
+                <td>Desarrolo Web</td>
+                <td>
+                    <button class="btn btn-info btn-sm">Editar</button>
+                    <button class="btn btn-danger btn-sm">Eliminar</button>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>

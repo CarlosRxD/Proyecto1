@@ -6,6 +6,10 @@ import { ListaComponent } from './app/lista/lista.component';
 import { ParentComponent } from './app/parent/parent.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { PlatziComponent } from './app/platzi/platzi.component';
+import { routes } from './app/app.routes';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { FooterComponent } from './app/footer/footer.component';
 @Component({
   selector: 'app-root',
   imports: [
@@ -13,19 +17,18 @@ import { PlatziComponent } from './app/platzi/platzi.component';
     ListaComponent,
     ParentComponent,
     PlatziComponent,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    FooterComponent
   ],
   standalone: true,
-  template: `
-    <!--<app-practica></app-practica>
-    <app-lista></app-lista>
-      <app-parent></app-parent>-->
-    <app-platzi></app-platzi>
-  `,
+  templateUrl: 'main.html',
 })
 export class App {
   name = 'Angular';
 }
 
 bootstrapApplication(App, {
-  providers: [provideHttpClient(withFetch())],
+  providers: [provideRouter(routes,withComponentInputBinding()),provideHttpClient(withFetch())],
 });

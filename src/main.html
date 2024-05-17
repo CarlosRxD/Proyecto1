@@ -1,0 +1,39 @@
+<div class="bg-success-subtle">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" routerLink="/home" routerLinkActive="active" aria-current="page">Inicio</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link " routerLink="/materias" routerLinkActive="active" aria-current="page">Materias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/alumnos" routerLinkActive="active" aria-current="page">Alumnos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/about" routerLinkActive="active" aria-current="page">About</a>
+                    </li>
+                    
+                </ul>
+                <ol class="nav nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/alumno/1" routerLinkActive="active" aria-current="page">Carlos R</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" routerLink="/alumno/2" routerLinkActive="active" aria-current="page">Adrian</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" routerLink="/alumno/3" routerLinkActive="active" aria-current="page">Maritza</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- The routed views render in the <router-outlet>-->
+<hr>
+<router-outlet></router-outlet>
+<hr>
+
+
+<app-footer></app-footer>
